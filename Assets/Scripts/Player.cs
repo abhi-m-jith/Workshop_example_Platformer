@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -85,5 +86,8 @@ public class Player : MonoBehaviour
         isOnGround = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, GroundMask);
     }
 
-   
+   public void RestartScene()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
